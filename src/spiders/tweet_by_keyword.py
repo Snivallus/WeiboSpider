@@ -26,7 +26,7 @@ class TweetSpiderByKeyword(Spider):
         keywords = ['丽江']
         # 这里的时间可替换成实际需要的时间段
         start_time = datetime.datetime(year=2022, month=10, day=1, hour=0)
-        end_time = datetime.datetime(year=2022, month=10, day=7, hour=23)
+        end_time = datetime.datetime(year=2022, month=10, day=2, hour=0)
         # 是否按照小时进行切分, 数据量更大; 对于非热门关键词**不需要**按照小时切分
         is_split_by_hour = True
         for keyword in keywords:
@@ -52,7 +52,7 @@ class TweetSpiderByKeyword(Spider):
         if '<p>抱歉，未找到相关结果。</p>' in html:
             self.logger.info(f'no search result. url: {response.url}')
             return
-        tweets_infos = re.findall('<div class="from"\s+>(.*?)</div>', html, re.DOTALL)
+        tweets_infos = re.findall(r'<div class="from"\s+>(.*?)</div>', html, re.DOTALL)
         for tweets_info in tweets_infos:
             tweet_ids = re.findall(r'weibo\.com/\d+/(.+?)\?refer_flag=1001030103_" ', tweets_info)
             for tweet_id in tweet_ids:
