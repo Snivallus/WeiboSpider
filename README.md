@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ```bash
 cd weibospider
-python run_spider.py user
+python ./src/run_spider.py user
 ```
 
 ```json
@@ -65,12 +65,10 @@ python run_spider.py user
 }
 ```
 
-
-
 ### 2.2 用户粉丝列表采集
 
 ```bash
-python run_spider.py fan
+python ./src/run_spider.py fan
 ```
 
 ```json
@@ -98,12 +96,10 @@ python run_spider.py fan
 ...
 ```
 
-
-
 ### 2.3 用户关注列表采集
 
 ```bash
-python run_spider.py follow
+python ./src/run_spider.py follow
 ```
 
 ```json
@@ -133,12 +129,10 @@ python run_spider.py follow
 ...
 ```
 
-
-
 ### 2.4 微博评论采集
 
 ```bash
-python run_spider.py comment
+python ./src/run_spider.py comment
 ```
 
 ```json
@@ -167,12 +161,10 @@ python run_spider.py comment
 ...
 ```
 
-
-
 ### 2.5 微博转发采集
 
 ```bash
-python run_spider.py repost
+python ./src/run_spider.py repost
 ```
 
 ```json
@@ -203,12 +195,10 @@ python run_spider.py repost
 ...
 ```
 
-
-
 ### 2.6 基于微博ID的微博采集
 
 ```bash
-python run_spider.py tweet_by_tweet_id
+python ./src/run_spider.py tweet_by_tweet_id
 ```
 
 ```json
@@ -242,12 +232,10 @@ python run_spider.py tweet_by_tweet_id
 ...
 ```
 
-
-
 ### 2.7 基于用户ID的微博采集
 
 ```bash
-python run_spider.py tweet_by_user_id
+python ./src/run_spider.py tweet_by_user_id
 ```
 
 ```json
@@ -271,12 +259,10 @@ python run_spider.py tweet_by_user_id
 ...
 ```
 
-
-
 ### 2.8 基于关键词的微博采集
 
 ```bash
-python run_spider.py tweet_by_keyword
+python ./src/./src/run_spider.py tweet_by_keyword
 ```
 
 ```json
