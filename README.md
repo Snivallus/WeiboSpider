@@ -3,7 +3,7 @@
 ### 1.1 建立虚拟环境
 
 ```bash
-cd WeiboSpider
+cd src
 python -m venv venv
 pip install -r requirements.txt
 ```
@@ -14,19 +14,22 @@ pip install -r requirements.txt
 打开浏览器的开发者模式 (Fn + F12), 再次刷新.
 选择 Network, 勾选 'All'.  
 复制 `weibo.com` 数据包中的 Cookie 值.  
-编辑 `weibospider/cookie.txt` 并替换成刚刚复制的 Cookie.
-
+编辑 `src/cookie.txt` 并替换成刚刚复制的 Cookie.
 
 ## 2. 运行程序
 
-根据自己实际需要重写 `./weibospider/spiders/` 中的 `start_requests` 函数.   
+根据自己实际需要重写 `./src/spiders/` 中的 `start_requests` 函数.   
 采集的数据存在 `output` 文件中, 命名为 `{spider.name}_{datetime}.jsonl`.
+
+进入源文件目录
+```bash
+cd src
+```
 
 ### 2.1 用户信息采集
 
 ```bash
-cd weibospider
-python ./src/run_spider.py user
+python run_spider.py user
 ```
 
 ```json
@@ -68,7 +71,7 @@ python ./src/run_spider.py user
 ### 2.2 用户粉丝列表采集
 
 ```bash
-python ./src/run_spider.py fan
+python run_spider.py fan
 ```
 
 ```json
@@ -99,7 +102,7 @@ python ./src/run_spider.py fan
 ### 2.3 用户关注列表采集
 
 ```bash
-python ./src/run_spider.py follow
+python run_spider.py follow
 ```
 
 ```json
@@ -132,7 +135,7 @@ python ./src/run_spider.py follow
 ### 2.4 微博评论采集
 
 ```bash
-python ./src/run_spider.py comment
+python run_spider.py comment
 ```
 
 ```json
@@ -164,7 +167,7 @@ python ./src/run_spider.py comment
 ### 2.5 微博转发采集
 
 ```bash
-python ./src/run_spider.py repost
+python run_spider.py repost
 ```
 
 ```json
@@ -198,7 +201,7 @@ python ./src/run_spider.py repost
 ### 2.6 基于微博ID的微博采集
 
 ```bash
-python ./src/run_spider.py tweet_by_tweet_id
+python run_spider.py tweet_by_tweet_id
 ```
 
 ```json
@@ -235,7 +238,7 @@ python ./src/run_spider.py tweet_by_tweet_id
 ### 2.7 基于用户ID的微博采集
 
 ```bash
-python ./src/run_spider.py tweet_by_user_id
+python run_spider.py tweet_by_user_id
 ```
 
 ```json
@@ -262,7 +265,7 @@ python ./src/run_spider.py tweet_by_user_id
 ### 2.8 基于关键词的微博采集
 
 ```bash
-python ./src/./src/run_spider.py tweet_by_keyword
+python run_spider.py tweet_by_keyword
 ```
 
 ```json

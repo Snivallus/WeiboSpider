@@ -1,2 +1,4 @@
 venv/
+output/
+__pycache__/
 src/cookie.txt
