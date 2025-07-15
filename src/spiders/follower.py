@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-"""
-Author: nghuyong
-Mail: nghuyong@163.com
-Created Time: 2020/4/14
-"""
+
 import json
 from scrapy import Spider
 from scrapy.http import Request
@@ -22,7 +18,7 @@ class FollowerSpider(Spider):
         """
         爬虫入口
         """
-        # 这里user_ids可替换成实际待采集的数据
+        # 这里 user_ids 可替换成实际待采集的数据
         user_ids = ['1087770692']
         for user_id in user_ids:
             url = self.base_url + f"?page=1&uid={user_id}"

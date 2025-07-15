@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-"""
-Author: nghuyong
-Mail: nghuyong@163.com
-Created Time: 2020/4/14
-"""
+
 import json
 from scrapy import Spider
 from scrapy.http import Request
@@ -13,7 +9,7 @@ from spiders.common import parse_tweet_info, parse_long_tweet
 
 class TweetSpiderByTweetID(Spider):
     """
-    用户推文ID采集推文
+    用户推文 ID 采集推文
     """
     name = "tweet_spider_by_tweet_id"
     base_url = "https://weibo.cn"
@@ -22,7 +18,7 @@ class TweetSpiderByTweetID(Spider):
         """
         爬虫入口
         """
-        # 这里user_ids可替换成实际待采集的数据
+        # 这里 user_ids 可替换成实际待采集的数据
         tweet_ids = ['LqlZNhJFm']
         for tweet_id in tweet_ids:
             url = f"https://weibo.com/ajax/statuses/show?id={tweet_id}"

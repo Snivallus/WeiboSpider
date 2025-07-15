@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-"""
-Author: nghuyong
-Mail: nghuyong@163.com
-Created Time: 2020/4/14
-"""
+
 import datetime
 import json
 import re
@@ -24,9 +20,9 @@ class TweetSpiderByUserID(Spider):
         """
         爬虫入口
         """
-        # 这里user_ids可替换成实际待采集的数据
+        # 这里 user_ids 可替换成实际待采集的数据
         user_ids = ['1087770692']
-        # 这里的时间替换成实际需要的时间段，如果要采集用户全部推文 is_crawl_specific_time_span 设置为False
+        # 这里的时间替换成实际需要的时间段, 如果要采集用户全部推文 is_crawl_specific_time_span 设置为 False
         is_crawl_specific_time_span = True
         start_time = datetime.datetime(year=2022, month=1, day=1)
         end_time = datetime.datetime(year=2023, month=1, day=1)

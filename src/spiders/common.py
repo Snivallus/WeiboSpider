@@ -1,14 +1,9 @@
 #!/usr/bin/env python
 # encoding: utf-8
-"""
-Author: rightyonghu
-Created Time: 2022/10/24
-"""
+
 import json
 import re
-
 import dateutil.parser
-
 
 def base62_decode(string):
     """
