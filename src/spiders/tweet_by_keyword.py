@@ -23,12 +23,31 @@ class TweetSpiderByKeyword(Spider):
         爬虫入口
         """
         # 这里keywords可替换成实际待采集的数据
-        keywords = ['丽江']
+        # keywords = [
+        #     '徐家汇源',
+        #     '徐家汇天主堂', '圣依纳爵天主堂',
+        #     '上海气象博物馆', '徐家汇观象台',
+        #     '徐家汇藏书楼',
+        #     '徐家汇书院',
+        #     '徐光启墓', '光启公园', 
+        #     '徐家汇圣母院',
+        #     '徐汇公学', '启明女校', '南洋公学'
+        # ]
+        keywords = [
+            '武康大楼',
+            '武康路',
+            '上海武康路',
+            '武康大楼打卡',
+            '武康大楼外观',
+            '武康大楼历史',
+            '武康大楼建筑',
+            '武康大楼雪糕'
+        ]
         # 这里的时间可替换成实际需要的时间段
-        start_time = datetime.datetime(year=2022, month=10, day=1, hour=0)
-        end_time = datetime.datetime(year=2022, month=10, day=2, hour=0)
+        start_time = datetime.datetime(year=2010, month=10, day=1, hour=0)
+        end_time = datetime.datetime(year=2025, month=7, day=15, hour=0)
         # 是否按照小时进行切分, 数据量更大; 对于非热门关键词**不需要**按照小时切分
-        is_split_by_hour = True
+        is_split_by_hour = False
         for keyword in keywords:
             if not is_split_by_hour:
                 _start_time = start_time.strftime("%Y-%m-%d-%H")
